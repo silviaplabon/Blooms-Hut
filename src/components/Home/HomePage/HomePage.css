@@ -1,9 +1,9 @@
 .headerContainer {
-    height:37rem!important;
+    height:40rem!important;
     position:relative;
 }
 .headerContainer::after {
-    height:37rem!important;
+    height:40rem!important;
     content:'';
     position: absolute;
     top: 0;

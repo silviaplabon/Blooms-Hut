@@ -23,7 +23,7 @@ const HeaderMain = () => {
             <h2 className=" pt-5 h2TitleFont  text-center text-white" >Let's make Beautiful flowers part of your life</h2>
 
             <div className="d-flex-column justify-content-center align-items-center text-center text-white">
-                <h6 classsName="h6TitleFont  text-white h6HeaderMain mt-2">We offer traditional and contemporary floral design styles
+                <h6 classsName="h6TitleFont  text-white h6HeaderMain mt-2 mx-1 ">We offer traditional and contemporary floral design styles
                     that are appropriate for birthdays, anniversaries, get well,
                     new baby, sympathy, holidays or just because.</h6>
                 <button className="btn text-white text-center shopNowButton" >Shop Now</button>
