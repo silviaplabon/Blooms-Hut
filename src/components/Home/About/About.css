@@ -1,0 +1,12 @@
+
+.aboutContent{
+        background-image: url(https://i.ibb.co/BnWbfj4/about-Content-Background.png);
+        background-repeat: no-repeat;
+        background-position:right top;
+}
+.h3TitleFont{
+    font-family: 'Philosopher', sans-serif;
+}
+.h6TitleFont{
+font-family: 'Bona Nova', serif;
+}

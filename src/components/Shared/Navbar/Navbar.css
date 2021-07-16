@@ -1,0 +1,17 @@
+.headerStyle {
+    padding-bottom: 2%!important;
+    color:black!important;
+    cursor:pointer;
+}
+.logStyle{
+    padding:0px 8px!important;
+}
+
+
+
+.headerStyle a, .h2HeaderColor {
+    color: black!important;
+}
+.lengthStyle{
+    text-decoration: none!important;
+}
