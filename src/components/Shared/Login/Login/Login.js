@@ -32,26 +32,21 @@ const Login = () => {
     let isFormValid;
     if (event.target.name === 'displayName') {
       isFormValid = /^[a-zA-Z\s\.]*$/.test(event.target.value);
-      console.log(isFormValid)
     }
     if (event.target.name === 'email') {
       isFormValid = /\S+@\S+\.\S+/.test(event.target.value);
-      console.log(isFormValid)
     }
     if (event.target.name === 'password') {
       isFormValid = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/.test(event.target.value);
       //one upper case,one lower case,one digit,one special character
-      console.log(isFormValid)
     }
     if (event.target.name === 'repassword') {
       isFormValid = (event.target.value === user.password)
-      console.log(isFormValid, "isform valid")
     }
     if (isFormValid) {
       const newUserInfo = { ...user };
       newUserInfo[event.target.name] = event.target.value;
       newUserInfo.isValid = isFormValid;
-      console.log(user.isValid, "isValid")
       setUser(newUserInfo);
     }
   }
@@ -62,7 +57,6 @@ const Login = () => {
           .then(res => {
             handleResponse(res, true)
             updateUsername(user.displayName)
-            console.log(user.displayName,"silvia why error")
           })
           .catch(error => console.log(error))
       }
@@ -74,7 +68,6 @@ const Login = () => {
         })
         .catch(error => console.log(error))
     }
-    console.log(user.email, user.password, "silvia")
   }
 
   //1 Sign IN

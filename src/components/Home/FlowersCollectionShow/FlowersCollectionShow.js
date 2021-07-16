@@ -9,8 +9,8 @@ import { AnimationWrapper } from 'react-hover-animation'
 const FlowersCollectionShow = (props) => {
     const { previewURL, price, tags, views, likes, downloads, comments } = props.flower;
     const state = props.state;
-    console.log(props.flower)
-    const newTags = tags?.replace(/,/g, ' ');
+    let newTags = tags?.replace(/,/g, ' ');
+    newTags=newTags.charAt(0).toUpperCase() + newTags.slice(1)
 
     return (
         <div className="col mt-3">

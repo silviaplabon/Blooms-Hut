@@ -5,19 +5,28 @@ import FlowersCollectionShow from '../FlowersCollectionShow/FlowersCollectionSho
 import './FlowersCollection.css'
 
 const FlowersCollection = () => {
+
     const history = useHistory()
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [flowersData, setFlowersData] = useState([]);
     const [numberOfData, setNumberOfData] = useState(10);
     const [visible, setVisible] = useState(true);
-
+    const [error,setError]=useState(null);
     useEffect(() => {
         fetch(`https://pixabay.com/api/?key=20263967-046b644b9589617318ad2e8b9&q=flowers&image_type=photo&per_page=${numberOfData}`)
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    throw Error('Could Not Fetch the data')
+                }
+                return res.json();
+            })
             .then(data => {
                 setFlowersData(data.hits);
+                setError(null);
             })
-
+            .catch(err => {
+                setError(err.message);
+            })
     }, [numberOfData])
 
     const sliceImageOperation = () => {
@@ -39,6 +48,7 @@ const FlowersCollection = () => {
                 Our Awesome Flowers
             </h2>
             <h4 className="text-center h4TitleFont">Shop the collection</h4>
+            {error &&<h6 clasName="text-center">{error}</h6>}
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                 {
                     flowersData?.map(flower =>

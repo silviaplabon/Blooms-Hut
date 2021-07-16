@@ -85,7 +85,6 @@ export const facebookSignIn = () => {
         .then((res) => {
             var credential = res.credential;
             var accessToken = credential.accessToken;
-            console.log(res.user, "facebook res.user")
             var user = res.user;
             user.error = '';
             user.isSignedIn = true;
@@ -135,7 +134,6 @@ export const githubSignIn = () => {
         .then((res) => {
             var credential = res.credential;
             var token = credential.accessToken;
-            console.log(res.user, "github user")
             const { displayName, photoURL, email } = res.user;
             var accessToken = credential.accessToken;
             const githubUser = {
