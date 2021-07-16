@@ -1,7 +1,10 @@
 .headerStyle {
     padding-bottom: 2%!important;
-    color:black!important;
+    color:white!important;
     cursor:pointer;
+}
+#navbarContainer{ 
+    font-family: 'Philosopher', sans-serif;
 }
 .logStyle{
     padding:0px 8px!important;
@@ -10,7 +13,7 @@
 
 
 .headerStyle a, .h2HeaderColor {
-    color: black!important;
+    color: white!important;
 }
 .lengthStyle{
     text-decoration: none!important;

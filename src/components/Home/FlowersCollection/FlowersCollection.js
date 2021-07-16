@@ -5,7 +5,7 @@ import FlowersCollectionShow from '../FlowersCollectionShow/FlowersCollectionSho
 import './FlowersCollection.css'
 
 const FlowersCollection = () => {
-    const history=useHistory()
+    const history = useHistory()
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [flowersData, setFlowersData] = useState([]);
     const [numberOfData, setNumberOfData] = useState(10);
@@ -34,7 +34,7 @@ const FlowersCollection = () => {
 
 
     return (
-        <div className="container">
+        <div className="container" id="flowersSection">
             <h2 className="text-center h2TitleFont">
                 Our Awesome Flowers
             </h2>
@@ -50,13 +50,13 @@ const FlowersCollection = () => {
                 visible == true ?
                     <div className="d-flex justify-content-center">
                         {
-                            loggedInUser.email ? 
-                            <button className="my-2 btn btn-outline-primary text-white" style={{ backgroundColor: "#1B1B1B" }} onClick={() => sliceImageOperation()}>Load More</button> :                    
-                            <button className="my-2 btn btn-outline-primary text-white" style={{ backgroundColor: "#1B1B1B" }} onClick={()=> history.push('/auth/login')}>Load More</button>
+                            loggedInUser.email ?
+                                <button className="my-4 btn  loadMore text-white" onClick={() => sliceImageOperation()}>Load More</button> :
+                                <button className="my-4 btn loadMore text-white" onClick={() => history.push('/auth/login')}>Load More</button>
                         }
                     </div>
 
-                    : <h5 className="text-center">END of Result</h5>
+                    : <h5 className="text-center my-4 ">END of Result</h5>
             }
 
 

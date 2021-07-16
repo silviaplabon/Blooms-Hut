@@ -120,6 +120,7 @@ const Login = () => {
 
   return (
     <div className="containerColor">
+      <Navbar state={false}></Navbar>
       {!user.isSignedIn &&
         <div className="row container  rowLogin w-50 m-auto d-flex justify-content-center align-items-center flex-column">
           <div className="col-md-12 cardSignStyle p-4 mt-5">
@@ -155,8 +156,8 @@ const Login = () => {
             </form>
             {
               authState ?
-                <h6 className="fw-light mt-1 colorWhite">Don't Have an account? <a className=" colorWhite loginAnchor fw-bold fw-lighter  btn text-decoration-none text-warning" onClick={() => setAuthState(!authState)}> Sign Up</a> </h6> :
-                <h6 className="fw-light mt-1 colorWhite">Already Have an account? <a className="colorWhite loginAnchor btn fw-bold text-decoration-none text-warning " onClick={() => setAuthState(!authState)}> Sign In</a></h6>
+                <h6 className="fw-light mt-1 colorWhite text-center">Don't Have an account? <a className=" colorWhite loginAnchor fw-bold fw-lighter  btn text-decoration-none text-warning" onClick={() => setAuthState(!authState)}> Sign Up</a> </h6> :
+                <h6 className="fw-light mt-1 colorWhite text-center">Already Have an account? <a className="colorWhite loginAnchor btn fw-bold text-decoration-none text-warning " onClick={() => setAuthState(!authState)}> Sign In</a></h6>
             }
           </div>
 

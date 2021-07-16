@@ -7,3 +7,11 @@
     margin:auto;
     width:80%;
 }
+
+.shopNowButton,.searchButton,.loadMore{
+        background-image:linear-gradient(-90deg,#a03c3a,#3e1e1e) ;
+        border-radius: 0.70rem;
+}
+.shopNowButton:hover,.searchButton:hover,.loadMore{
+    background-image:linear-gradient(-90deg,#3e1e1e,#a03c3a) ;
+}

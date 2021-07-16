@@ -29,7 +29,7 @@
 
 .contain:hover .overlay {
     display: block;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(235, 85, 163,0.7);
 }
 
 .projectHover:hover .overlay {
@@ -38,4 +38,6 @@
 .contain:hover .button {
     opacity: 1;
   }
-
+.arrangementShowContainer{
+    cursor:pointer;
+}

@@ -5,10 +5,10 @@ const WonderfulArrangementShow = (props) => {
     const {name,image,description}=props.data;
 
     return (
-        <div className="col">
-            <div className="card shadow-lg w-100 text-center rounded" >
+        <div className="col mt-2">
+            <div className="card shadow-lg w-100 text-center rounded arrangementShowContainer" >
                 <div className="d-flex justify-content-center align-items-center h-100 contain ">
-                    <img src={image} className="card-img-top w-100 h-100 " />
+                    <img src={image}  className="card-img-top w-100 h-100 "/>
                     <div className="overlay d-flex justify-content-center align-items-center" id="overlays"  >
                         <div className="button d-flex-row align-items-center justify-content-center">
                             <h4 className="text-center text-white"> { name}</h4>

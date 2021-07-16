@@ -5,6 +5,9 @@
     color:white!important;
 }
 
+.containerColor{
+   color: #fff0e9!important;  
+}
 .hrStyle {
     height: 2!important;
 }
@@ -12,7 +15,7 @@
 .cardSignStyle {
     border: 1px solid gray;
     border-radius: 0.65rem!important;
-    background-color: #27211D!important;
+    background-color: #1b1b1b!important;
 }
 
 

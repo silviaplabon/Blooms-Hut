@@ -10,11 +10,18 @@ import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } f
 import { UserContext } from '../../../App';
 
 
-const Header = () => {
+const Header = ({ state }) => {
     const history = useHistory();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    useEffect(() => {
+        state == false ? document.getElementById('navbarContainer').style.backgroundColor = '#1B1B1B' :
+            document.getElementById('navbarContainer').style.backgroundColor = ''
+    }, [state])
+
+
     return (
-        <div className="headerStyle upperdupper1 "  >
+        <div className="headerStyle" id="navbarContainer"  >
             <nav className="navbar navbar-expand-md navbar-light fw-bold navbarColor  navbarDesign container pt-5">
                 <div className="container-fluid">
                     <h1 className="navbar-brand h2HeaderColor fw-bold " href="#">Blooms Hut</h1>
@@ -24,9 +31,12 @@ const Header = () => {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav" >
                             <Link1 to="/" className="nav-link text-white" >Home</Link1>
-                            <Link1 to="/user/AddMessage" className="nav-link text-white" >profile</Link1>
-                            <Link activeClass="active" to="filterSectionLink" spy={true} smooth={true} offset={50} duration={500}
-                                className="nav-link text-white">Filter</Link>
+                            <Link activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500}
+                                className="nav-link text-white">About</Link>
+                            <Link activeClass="active" to="flowersSection" spy={true} smooth={true} offset={50} duration={500}
+                                className="nav-link text-white">Flowers</Link>
+                            <Link activeClass="active" to="arrangementsSection" spy={true} smooth={true} offset={50} duration={500}
+                                className="nav-link text-white">Arrangements</Link>
                             {(loggedInUser.email) ? <button onClick={() => setLoggedInUser({})} className="btn  buttonColor   buttonStyleHeader  nav-link fw-bold " style={{ color: 'white' }}>Logout</button> :
                                 <Link1 to="/auth/login" className="btn   buttonStyleHeader buttonColor fw-bold">Login</Link1>
                             }

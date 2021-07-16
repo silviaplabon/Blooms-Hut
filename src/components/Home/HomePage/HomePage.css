@@ -1,7 +1,17 @@
-.headerSideContainer{
+.headerContainer {
     height:37rem!important;
-    background-image: url('https://i.ibb.co/zF3szcx/backgroundimage1.jpg')!important;
+    position:relative;
+}
+.headerContainer::after {
+    height:37rem!important;
+    content:'';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    background-image: url(https://i.ibb.co/4KHz3XK/bloomshutbackground1.jpg);
     background-repeat:no-repeat;
-    background-size: 100% 100%!important;
+    background-size: 100% 100%;
+    z-index: -50;
     opacity:1;
-} 
+}

@@ -4,7 +4,7 @@ import WonderfulArrangementShow from '../WonderfulArrangementShow/WonderfulArran
 const SubscribeSection = () => {
     const imageData = [
         {
-            name:'SUbscription Service',
+            name:'Subscription Service',
             image: 'https://i.ibb.co/VQd5GLr/footerbefore1.jpg',
             description:'Treat your workplace or home to a touch of regular beauty with our personalized subscription service.' },
         { 
@@ -16,12 +16,10 @@ const SubscribeSection = () => {
             name:'Make Someone Smile',
             image: 'https://i.ibb.co/gTY3vJd/footerbefore3.jpg',
             description:'Camelia Floral Studio has all the best flowers to make someone smile and laugh or cheer someone up!'
-        },
-        // { image: 'https://i.ibb.co/SKrNSbj/footerbefore4.jpg' },
-
+        }
     ]
     return (
-        <div className="container mt-5 ">
+        <div className="container mt-5 " id="arrangementsSection">
             <h4 className="h4TitleFont text-center mt-5">Wonderful Gift</h4>
             <h2 className="text-center h2TitleFont ">Our Wonderful Arrangements</h2>
             <div className="row row-cols-2 row-cols-md-3 mt-5">

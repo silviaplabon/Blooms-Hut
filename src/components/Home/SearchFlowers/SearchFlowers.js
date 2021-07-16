@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import FlowersCollectionShow from '../FlowersCollectionShow/FlowersCollectionShow';
-
+import Navbar from '../../Shared/Navbar/Navbar'
+import './SearchFlowers.css'
+import Footer from '../../Shared/Footer/Footer';
 
 const SearchFlowers = () => {
     const name = useParams();
@@ -15,7 +17,9 @@ const SearchFlowers = () => {
     }, [name])
 
     return (
-        <div className="container">
+        <>
+                <Navbar state={false}></Navbar>
+                <div className="container mb-5">
             <h4 className="text-center h4TitleFont">Search Results</h4>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                 {
@@ -24,7 +28,9 @@ const SearchFlowers = () => {
                     )
                 }
             </div>
-        </div>
+            </div>
+            <Footer></Footer>
+        </>
     );
 };
 
